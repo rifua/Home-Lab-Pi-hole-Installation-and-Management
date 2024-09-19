@@ -78,8 +78,6 @@ Now we will be making the following changes:
 ![Installing Pi-hole](https://github.com/rifua/Home-Lab-Pi-hole-Installation-and-Management/assets/160899842/ed4e08f7-3c34-43de-8fd8-16cc8a14c436)
 After conforming that the Static IP has been applied, we now move-on towards installing Pi-hole on the Ubuntu Server by downloading it.
 
-#### Note: Make sure that you note down the URL for Pi-hole web-interface and the Password.
-
 ![Installing Pi-hole 2](https://github.com/rifua/Home-Lab-Pi-hole-Installation-and-Management/assets/160899842/eb31fb43-4f5a-40a5-a472-c5611bbf593f)
 #### Command Used: wget -O pi-installer.sh https://install.pi-hole.net
 
@@ -87,22 +85,33 @@ After conforming that the Static IP has been applied, we now move-on towards ins
 You will get a message just go along with it, and make sure you install the Admin-Web Interface
 
 ![DNS Selection - Installing Pi-hole ](https://github.com/rifua/Home-Lab-Pi-hole-Installation-and-Management/assets/160899842/5c2e0501-be4c-4319-995b-428d0d25acf0)
-Select any DNS you want to 
+Select any DNS you want to or add your custom DNS. In my case I have selected Cloudflare for additional security.
 
 ![Privacy Mode - Installing Pi-hole 2](https://github.com/rifua/Home-Lab-Pi-hole-Installation-and-Management/assets/160899842/59dc2d55-a2a9-4026-b0c4-6d9038bd2c42)
+Leave the Privacy Mode as Show everything.
 
 ![Installing Pi-hole - Final Step ](https://github.com/rifua/Home-Lab-Pi-hole-Installation-and-Management/assets/160899842/7d85472e-d262-41c3-988b-54303aa2df34)
+#### Note: Make sure that you note down the URL for Pi-hole web-interface and the Password.
 
 ### Step 4 : Changing Automatic DNS to Manual
+![image](https://github.com/user-attachments/assets/8e3b1c11-6add-442a-8512-a18f495c1ffa)
+Now we change the network setting of devices that we want to block ads on. Simply add Pi-hole IP as the DNS in the network settings. We can do the same for mobile devices as well. 
+
 ### Step 5 : Pi-hole Web Admin Portal
 ![Pi-hole Web Admin Login](https://github.com/rifua/Home-Lab-Pi-hole-Installation-and-Management/assets/160899842/fef30d03-2028-4bfe-8790-c506985ab17f)
+After successfully adding DNS server manually on different devices, we will now move on to the Pi-hole Web Admin Portal. 
+#### URL Used:http://192.168.1.101/admin/login.php
+#### Note: Use the URL, and Login Credentials from that was provided at the end of Pi-hole installation.
 
 ![Pi-hole Logged In Dashboard](https://github.com/rifua/Home-Lab-Pi-hole-Installation-and-Management/assets/160899842/1d4c3c5b-6a23-4a1b-9412-9b2af050d723)
+Pi-hole Web-Interface dashboard with Total Queries, Queries Blocked, and different other information can be seen. 
 
 ![Pi-hole Logged In Dashboard 2](https://github.com/rifua/Home-Lab-Pi-hole-Installation-and-Management/assets/160899842/dd8aff8a-7c61-46fd-b918-bd396b510f0d)
-
+Pi-hole Dashboard
 
 ### Step 6 : Additional Contents
 
+- We can add different sites that we want to block from the Pi-hole web-interface.
+- Query Log can let us view domains blocked and allowed. 
 
 
